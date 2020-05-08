@@ -22,10 +22,10 @@ try {
     "<t4 type='content' name='Name' output='fulltext' use-element='true' filename-element='Name' modifiers='striptags,htmlentities' />"
   );
   var titleLink = "";
-  var fieldSummary = content.get("Summary");
+  // var fieldSummary = content.get("Summary");
   var lastModified =
     '<div class="lastModified" style="display:inline-block">Last modified: <t4 type="meta" meta="last_modified" format="MMMM d, yyyy" /></div>';
-  var fieldKeywords = content.get("Keywords");
+  var fieldKeywords = content.get("Searchable Keyword");
   var fieldTags = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(
     dbStatement,
     publishCache,
