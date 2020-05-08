@@ -1,6 +1,6 @@
 try {
   /* -- Store all the things -- */
-  var fieldArticleTitle = content.get("Article Title");
+  var fieldArticleTitle = content.get("Title");
   var fieldSummary = content.get("Summary");
   var fieldArticle = content.get("Article");
   var fieldSectionLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(
