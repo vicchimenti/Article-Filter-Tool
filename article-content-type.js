@@ -1,18 +1,32 @@
+  /***
+*     @author Victor Chimenti, MSCS 2020
+*     @file article-content-type.js
+*
+*     This new content type is being adapted from the knowledge base
+*     content type used by IT Services and is intended to provide a
+*     searchable, sortable group of articles that can be exported to and used
+*     by any department.
+*
+*     This specific project is intended for the Career Engagement Dept,
+*     although this content type should easily be exportable to other teams.
+*
+*     This content type will work in conjunction with the Organizer and each item
+*     will contain one searchable, article.
+*
+*     Document will write once when the page loads
+*
+*     @version 1.0
+*/
+
 try {
   /* -- Store all the things -- */
   var articleTitle = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Title' output='normal' display_field='value' />");
   var articleSummary = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Summary' output='normal' display_field='value' />");
   var articleFullBody = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Article' output='normal' display_field='value' />");
-
-
-  // var fieldArticleTitle = content.get("Title");
-  // var fieldSummary = content.get("Summary");
-  // var fieldArticle = content.get("Article");
   var fieldSectionLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Section Link' output='linkurl' />");
   var fullTextLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Name' output='fulltext' use-element='true' filename-element='Name' modifiers='striptags,htmlentities' />");
   var titleLink = "";
-  // var fieldSummary = content.get("Summary");
-  // var lastModified = '<div class="lastModified" style="display:inline-block">Last modified: <t4 type="meta" meta="last_modified" format="MMMM d, yyyy" /></div>';
+  var lastModified = '<div class="lastModified" style="display:inline-block">Last modified: <t4 type="meta" meta="last_modified" format="MMMM d, yyyy" /></div>';
   var fieldKeywords = content.get("Searchable Keyword");
   var fieldTags = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Tags' output='normal' display_field='value' />");
   var listOfTags = "";
