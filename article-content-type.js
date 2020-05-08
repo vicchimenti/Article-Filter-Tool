@@ -1,8 +1,13 @@
 try {
   /* -- Store all the things -- */
-  var fieldArticleTitle = content.get("Title");
-  var fieldSummary = content.get("Summary");
-  var fieldArticle = content.get("Article");
+  var articleTitle = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Title' output='normal' display_field='value' />");
+  var articleSummary = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Summary' output='normal' display_field='value' />");
+  var articleFullBody = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Article' output='normal' display_field='value' />");
+
+
+  // var fieldArticleTitle = content.get("Title");
+  // var fieldSummary = content.get("Summary");
+  // var fieldArticle = content.get("Article");
   var fieldSectionLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Section Link' output='linkurl' />");
   var fullTextLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Name' output='fulltext' use-element='true' filename-element='Name' modifiers='striptags,htmlentities' />");
   var titleLink = "";
@@ -20,25 +25,25 @@ try {
   /* parse the list of tags, add <li> tags*/
   if (fieldTags != "") {
     var arrayOfTags = fieldTags.split(',');
-    for (i = 0; i < arrayOfTags.length; i++) {
+    for (let i = 0; i < arrayOfTags.length; i++) {
       listOfTags += '<li class="tag">' + arrayOfTags[i] + '</li>';
     }
     listOfTags = '<ul>' + listOfTags + '</ul>';
   }
 
   /* determine which link, if any, goes in the title */
-  if (fieldSectionLink == "" && fieldArticle == "") {
-    titleLink = "<h4>" + fieldArticleTitle + "</h4>";
+  if (fieldSectionLink == "" && articleFullBody == "") {
+    titleLink = "<h4>" + articleTitle + "</h4>";
   } else if (fieldSectionLink == "") {
-    titleLink = '<h4><a href="' + fullTextLink + '">' + fieldArticleTitle + '</a></h4>';
+    titleLink = '<h4><a href="' + fullTextLink + '">' + articleTitle + '</a></h4>';
   } else {
-    titleLink = '<h4><a href="' + fieldSectionLink + '">' + fieldArticleTitle + '</a></h4>';
+    titleLink = '<h4><a href="' + fieldSectionLink + '">' + articleTitle + '</a></h4>';
   }
 
   /* -- Write all the things -- */
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
-  document.write('<div class="summary">' + fieldSummary + '</div>')
+  document.write('<div class="summary">' + articleSummary + '</div>')
   document.write(listOfTags);
   // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, lastModified));
   document.write('<div class="keywords" style="display:none;" aria-hidden="true">' + fieldKeywords + '</div>');
