@@ -59,7 +59,7 @@ try {
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
   document.write('<div class="summary">' + articleSummary + '</div>')
   document.write(listOfTags);
-  // document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, lastModified));
+  document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, lastModified));
   document.write('<div class="keywords" style="display:none;" aria-hidden="true">' + fieldKeywords + '</div>');
   document.write(endingHTML);
 
