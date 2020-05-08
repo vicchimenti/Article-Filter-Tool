@@ -1,0 +1,51 @@
+<!-- <t4 type="content" name="Name" output="fulltext" use-element="true" filename-element="Name" modifiers="htmlentities" enable-dedit="false" />-->
+
+<section class="knowledgeBaseArticleWrapper contentItem" id="id<t4 type='meta' meta='content_id' />">
+    <div class="knowledgeBaseArticle standardContent">
+        <h1>
+            <t4 type="content" name="Name" output="normal" modifiers="striptags,htmlentities" />
+        </h1>
+        <t4 type="content" name="Summary" output="selective-output" modifiers="medialibrary,nav_sections" format="<div class=&quot;summary&quot;>
+  <h2>Summary</h2>
+  <p>$value</p>
+</div>" />
+
+        <h2>Step-by-step</h2>
+        <article class="stepByStep">
+            <t4 type="content" name="Article" output="normal" modifiers="medialibrary,nav_sections" />
+        </article>
+
+        <div id="publishDates">
+            <t4 type="content" name="First Published" output="selective-output" process-format="true" format="<div class=&quot;firstPublished&quot;> <strong>First published:</strong>
+        <t4 type=&quot;content&quot; name=&quot;First Published&quot; output=&quot;normal&quot; date_format=&quot;MMMM d, yyyy&quot; />        
+      </div>" />
+            <t4 type="content" name="Last updated" output="selective-output" process-format="true" format="<div class=&quot;firstPublished&quot;> <strong>First published:</strong>
+        <t4 type=&quot;content&quot; name=&quot;Last updated&quot; output=&quot;normal&quot; date_format=&quot;MMMM d, yyyy&quot; />        
+      </div>" />
+        </div>
+
+        <t4 type="content" name="Related Article 1" output="selective-output" process-format="true" format="<div id=&quot;relatedArticles&quot;>
+      <h2>Related Articles</h2>" />
+
+        <t4 type="content" name="Related Article 1" output="selective-output" process-format="true"
+            format="<ul><li><a href=&quot;<t4 type='content' name='Related Article 1' output='linkurl' />&quot;><t4 type=&quot;content&quot; name=&quot;Related Article 1&quot; output=&quot;linktext&quot; /></a></li>" />
+        <t4 type="content" name="Related Article 2" output="selective-output" process-format="true"
+            format="<li><a href=&quot;<t4 type='content' name='Related Article 2' output='linkurl' />&quot;><t4 type=&quot;content&quot; name=&quot;Related Article 2&quot; output=&quot;linktext&quot; /></a></li>" />
+        <t4 type="content" name="Related Article 3" output="selective-output" process-format="true"
+            format="<li><a href=&quot;<t4 type='content' name='Related Article 3' output='linkurl' />&quot;><t4 type=&quot;content&quot; name=&quot;Related Article 3&quot; output=&quot;linktext&quot; /></a></li>" />
+        <t4 type="content" name="Related Article 4" output="selective-output" process-format="true"
+            format="<li><a href=&quot;<t4 type='content' name='Related Article 4' output='linkurl' />&quot;><t4 type=&quot;content&quot; name=&quot;Related Article 4&quot; output=&quot;linktext&quot; /></a></li>" />
+        <t4 type="content" name="Related Article 5" output="selective-output" process-format="true"
+            format="<li><a href=&quot;<t4 type='content' name='Related Article 5' output='linkurl' />&quot;><t4 type=&quot;content&quot; name=&quot;Related Article 5&quot; output=&quot;linktext&quot; /></a></li>" />
+        <t4 type="content" name="Related Article 6" output="selective-output" process-format="true"
+            format="<li><a href=&quot;<t4 type='content' name='Related Article 6' output='linkurl' />&quot;><t4 type=&quot;content&quot; name=&quot;Related Article 6&quot; output=&quot;linktext&quot; /></a></li>" />
+        <t4 type="content" name="Related Article 7" output="selective-output" process-format="true"
+            format="<li><a href=&quot;<t4 type='content' name='Related Article 7' output='linkurl' />&quot;><t4 type=&quot;content&quot; name=&quot;Related Article 7&quot; output=&quot;linktext&quot; /></a></li>" />
+        <t4 type="content" name="Related Article 8" output="selective-output" process-format="true"
+            format="<li><a href=&quot;<t4 type='content' name='Related Article 8' output='linkurl' />&quot;><t4 type=&quot;content&quot; name=&quot;Related Article 8&quot; output=&quot;linktext&quot; /></a></li>" />
+        <t4 type="content" name="Related Article 9" output="selective-output" process-format="true"
+            format="<li><a href=&quot;<t4 type='content' name='Related Article 9' output='linkurl' />&quot;><t4 type=&quot;content&quot; name=&quot;Related Article 9&quot; output=&quot;linktext&quot; /></a></li>" />
+        <t4 type="content" name="Related Article 1" output="selective-output" process-format="true" format="</ul>" />
+        <t4 type="content" name="Related Article 1" output="selective-output" process-format="true" format="</div>" />
+    </div>
+</section>
