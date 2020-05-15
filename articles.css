@@ -1,3 +1,8 @@
 #pageTitle{
   padding: 0 0 30px 0;
 }
+
+/**  filter-search hidden classes  **/
+.hideByText, .hideByType, .hideResultsMessage {
+    display: none;
+}
