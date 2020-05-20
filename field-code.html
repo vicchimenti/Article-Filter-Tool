@@ -1,23 +1,31 @@
-<div class="col-xs-12 col-md-6 form-group">
-  <label for="keystroke_filter">Filter support articles</label>
-  <input type="text" class="form-control" name="articleScan" value="" id="keystroke_filter" placeholder="Filter Instantly" autofocus aria-label="Filter articles" />
-</div>
+<form action="#" id="articleFilter">
+  <!-- Search Field -->
+  <fieldset for="articleFilter">
 
-<div class="col-xs-12 col-md-6 form-group">
-  <label for="SelectBox-ByType">Categories:</label> 
-  <div class="select-input">
-    <select name="SelectBox-ByType" id="SelectBox-ByType">
-      <option value=" ">All</option>
-      <option value="Password Reset">Password Reset</option>
-      <option value="Email and Accounts">Email and Accounts</option>
-      <option value="Campus Card and eAccounts">Campus Card and eAccounts</option>
-      <option value="SU Managed Printing">SU Managed Printing</option>
-      <option value="Office 365">Office 365</option>
-      <option value="Data Storage">Data Storage</option>
-      <option value="Mobile Device Settings">Mobile Device Settings</option>
-      <option value="Campus Phone Services">Campus Phone Services</option>
-      <option value="Wired and Wireless Network">Wired and Wireless Network</option>
-      <option value="Other">Other</option>
-    </select>
-  </div>
-</div>
+    <div class="col-xs-12 col-md-6 form-group">
+      <label for="keystroke_filter">Filter support articles</label>
+      <input type="text" class="form-control" name="articleScan" value="" id="keystroke_filter" placeholder="Filter Instantly" autofocus aria-label="Filter articles" />
+    </div>
+
+    <div class="col-xs-12 col-md-6 form-group">
+      <label for="SelectBox-ByType">Categories:</label> 
+      <div class="select-input">
+        <select name="SelectBox-ByType" id="SelectBox-ByType">
+          <option value="" selected>Select a Category...</option>
+          <option value="Resume Building">Resume Building</option>
+          <option value="Cover Letter Writing">Cover Letter Writing</option>
+          <option value="Career Exploration">Career Exploration</option>
+          <option value="Job & Internship Search">Job & Internship Search</option>
+          <option value="Interview Preparation">Interview Preparation</option>
+          <option value="Graduate School Preparation">Graduate School Preparation</option>
+          <option value="Using Online Career Resources">Using Online Career Resources</option>
+          <option value="Networking & Community Building">Networking & Community Building</option>
+          <option value="Internships & Experiential Learning">Internships & Experiential Learning</option>
+          <option value="Evaluating Opportunities & Negotiation">Evaluating Opportunities & Negotiation</option>
+          <option value="Identity & Inclusion">Identity & Inclusion</option>
+          <option value="Alumni/Being a New Professional">Alumni/Being a New Professional</option>
+        </select>
+      </div>
+    </div>
+  </fieldset>
+</form>
