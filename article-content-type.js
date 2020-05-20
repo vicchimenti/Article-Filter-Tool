@@ -53,7 +53,7 @@ try {
   if (articleTypes != "") {
     var arrayOfTypes = articleTypes.split(',');
     for (let i = 0; i < arrayOfTypes.length; i++) {
-      listOfTypes += '<li class="articleTypes">' + arrayOfTypes[i] + '</li>';
+      listOfTypes += '<li class="articleType">' + arrayOfTypes[i] + '</li>';
     }
     listOfTypes = '<ul>' + listOfTypes + '</ul>';
   }
@@ -76,7 +76,7 @@ try {
   /* -- Write Program Level 1 Details --*/
   if (listOfTypes != "") {
     document.write('<div class="row col-xs-12 levelOne">');
-    document.write('<div class="col-xs-12 articleDetails articleType"><h5>Syllabus: </h5><div class="articleTypes">' + listOfTypes + '</div></div>');
+    document.write('<div class="col-xs-12 articleDetails articleTypes"><h5>Syllabus: </h5><div class="articleTypes">' + listOfTypes + '</div></div>');
     document.write('</div>');
   } else {
     document.write('<div class="row levelOne articleDetails articleType" style="display: none";><h5>No Category Provided</h5></div>');
