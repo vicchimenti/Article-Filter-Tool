@@ -15,7 +15,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 2.1
+*     @version 2.3
 */
 
 try {
@@ -75,18 +75,20 @@ try {
   /* -- Write all the things -- */
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
-  document.write('<div class="descriptionWrapper"><figure class="programImageWrapper"><img src="' + programImageMedia + '" alt="' + altImage + '" class="programImage" /></figure><div class="summary"><p>' + articleSummary + '</p></div>');
-  // document.write('<div class="summary">' + articleSummary + '</div>')
+  document.write('<figure class="programImageWrapper"><img src="' + programImageMedia + '" alt="' + altImage + '" class="programImage" /></figure>');
+  document.write('<div class="summary">' + articleSummary + '</div>')
   document.write(listOfTags);
   // document.write(listOfTypes);
+
   /* -- Write Program Level 1 Details --*/
   if (listOfTypes != "") {
     document.write('<div class="row col-xs-12 levelOne">');
-    document.write('<div class="col-xs-12 articleDetails articleTypes"><h5>Syllabus: </h5><div class="articleTypes">' + listOfTypes + '</div></div>');
+    document.write('<div class="col-xs-12 articleDetails articleTypes"><h5>Categories: </h5><div class="articleTypes"><span>' + listOfTypes + '</span></div></div>');
     document.write('</div>');
   } else {
     document.write('<div class="row levelOne articleDetails articleType" style="display: none";><h5>No Category Provided</h5></div>');
   }
+
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, lastModified));
   document.write('<div class="keywords" style="display:none;" aria-hidden="true">' + fieldKeywords + '</div>');
   document.write(endingHTML);
