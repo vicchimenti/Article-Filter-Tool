@@ -32,6 +32,8 @@ try {
   var fieldKeywords = content.get("Searchable Keyword");
   var fieldTags = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Tags' output='normal' display_field='value' />");
   var listOfTags = "";
+  var listOfTypes = "";
+
 
   /* -- Prepare all the things -- */
   var beginningHTML = '<div class="knowledgeBaseItemWrapper" id="id<t4 type=\'meta\' meta=\'content_id\' />"><div class="knowledgeBaseItem standardContent">';
