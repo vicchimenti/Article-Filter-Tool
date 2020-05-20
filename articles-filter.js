@@ -1,4 +1,4 @@
-
+<script type="text/javascript">
 /***
 *   @author Victor Chimenti, MSCS 2020
 *   @file filter-search.js
@@ -12,9 +12,6 @@
 *
 *   @version 1.0
 */
-
-
-<script type="text/javascript">
 
 
 
