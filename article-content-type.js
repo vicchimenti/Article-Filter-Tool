@@ -15,14 +15,15 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 1.3
+*     @version 2.1
 */
 
 try {
   /* -- Store all the things -- */
   var articleTitle = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Title' output='normal' display_field='value' />");
   var articleTypes = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Categories' output='normal' display_field='value' />");
-
+  var programImageMedia = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Education Abroad Program Image' output='normal' formatter='path/*' />");
+  var altImage = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Alt Image' output='normal' modifiers='striptags,htmlentities' />");
   var articleSummary = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Summary' output='normal' display_field='value' />");
   var articleFullBody = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Article' output='normal' display_field='value' />");
   var fieldSectionLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Section Link' output='linkurl' />");
@@ -67,10 +68,15 @@ try {
     titleLink = '<h4><a href="' + fieldSectionLink + '">' + articleTitle + '</a></h4>';
   }
 
+
+  // <figcaption class="programImageCaption">' + city + '</figcaption>
+
+
   /* -- Write all the things -- */
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
-  document.write('<div class="summary">' + articleSummary + '</div>')
+  document.write('<div class="descriptionWrapper"><figure class="programImageWrapper"><img src="' + programImageMedia + '" alt="' + altImage + '" class="programImage" /></figure><div class="summary"><p>' + articleSummary + '</p></div>');
+  // document.write('<div class="summary">' + articleSummary + '</div>')
   document.write(listOfTags);
   // document.write(listOfTypes);
   /* -- Write Program Level 1 Details --*/
