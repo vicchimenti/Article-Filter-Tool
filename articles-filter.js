@@ -10,7 +10,7 @@
 *   This script searches the special-topics courses content items for matches to the
 *   user selected search parameters in the filter field dropdown menus
 *
-*   @version 1.0
+*   @version 2.1
 */
 
 
