@@ -21,6 +21,8 @@
 try {
   /* -- Store all the things -- */
   var articleTitle = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Title' output='normal' display_field='value' />");
+  var articleTypes = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Categories' output='normal' display_field='value' />");
+
   var articleSummary = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Summary' output='normal' display_field='value' />");
   var articleFullBody = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Article' output='normal' display_field='value' />");
   var fieldSectionLink = com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, "<t4 type='content' name='Section Link' output='linkurl' />");
@@ -45,6 +47,15 @@ try {
     listOfTags = '<ul>' + listOfTags + '</ul>';
   }
 
+    /* parse the list of categories, add <li> tags*/
+  if (articleTypes != "") {
+    var arrayOfTypes = articleTypes.split(',');
+    for (let i = 0; i < arrayOfTypes.length; i++) {
+      listOfTypes += '<li class="articleTypes">' + arrayOfTypes[i] + '</li>';
+    }
+    listOfTypes = '<ul>' + listOfTypes + '</ul>';
+  }
+
   /* determine which link, if any, goes in the title */
   if (fieldSectionLink == "" && articleFullBody == "") {
     titleLink = "<h4>" + articleTitle + "</h4>";
@@ -59,6 +70,7 @@ try {
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
   document.write('<div class="summary">' + articleSummary + '</div>')
   document.write(listOfTags);
+  document.write(listOfTypes);
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, lastModified));
   document.write('<div class="keywords" style="display:none;" aria-hidden="true">' + fieldKeywords + '</div>');
   document.write(endingHTML);
