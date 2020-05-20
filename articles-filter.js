@@ -88,14 +88,14 @@ $(function () {
                             var typeValue = $(this).text();
                             // Check to see if the Key and Value are a Match
                             if (typeValue.match(typeKey)) {
-                                $(this).parents('.courseItemWrapper').removeClass('hideByType');
+                                $(this).parents('.knowledgeBaseItemWrapper').removeClass('hideByType');
                             } else {
-                                $(this).parents('.courseItemWrapper').addClass('hideByType');
+                                $(this).parents('.knowledgeBaseItemWrapper').addClass('hideByType');
                             }
                         });
                         // Else the Search Key is Null so Reset all Content Items to Visible
                     } else {
-                        $('.courseItemWrapper').removeClass('hideByType');
+                        $('.knowledgeBaseItemWrapper').removeClass('hideByType');
                     }
                     // parse out unselected content items and limit display to user selected items
                     parseItems.process();
