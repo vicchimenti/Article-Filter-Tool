@@ -10,7 +10,7 @@
 *   This script searches the special-topics courses content items for matches to the
 *   user selected search parameters in the filter field dropdown menus
 *
-*   @version 2.1
+*   @version 2.2
 */
 
 
@@ -84,7 +84,7 @@ $(function () {
                     let typeKey = $(this).val();
                     // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
                     if (typeKey) {
-                        $('.articleTypes').filter(function (i, e) {
+                        $('.articleType').filter(function (i, e) {
                             var typeValue = $(this).text();
                             // Check to see if the Key and Value are a Match
                             if (typeValue.match(typeKey)) {
