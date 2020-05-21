@@ -2,6 +2,12 @@
   padding: 0 0 30px 0;
 }
 
+.noResultsToShow {
+    background: #e3e3da;
+    padding: 30px;
+    margin: 15px;
+}
+
 figure.programImageWrapper {
     border: 1px solid #999;
     display: inline-block;
