@@ -15,7 +15,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 2.5
+*     @version 2.6
 */
 
 try {
@@ -79,7 +79,6 @@ try {
   document.write('<figure class="programImageWrapper"><img src="' + programImageMedia + '" alt="' + altImage + '" class="programImage" /><figcaption class="programImageCaption">' + altImage + '</figcaption></figure>');
   document.write('<div class="summary">' + articleSummary + '</div>')
   document.write(listOfTags);
-  document.write('</div>'); // close summaryWrapper
 
 
   // document.write(listOfTypes);
@@ -95,6 +94,8 @@ try {
 
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, lastModified));
   document.write('<div class="keywords" style="display:none;" aria-hidden="true">' + fieldKeywords + '</div>');
+  document.write('</div>'); // close summaryWrapper
+
   document.write(endingHTML);
 
 } catch (err) {
