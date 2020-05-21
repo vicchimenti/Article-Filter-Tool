@@ -15,7 +15,7 @@
 *
 *     Document will write once when the page loads
 *
-*     @version 2.4
+*     @version 2.5
 */
 
 try {
@@ -68,16 +68,20 @@ try {
     titleLink = '<h4><a href="' + fieldSectionLink + '">' + articleTitle + '</a></h4>';
   }
 
-
-  // <figcaption class="programImageCaption">' + city + '</figcaption>
+  
 
 
   /* -- Write all the things -- */
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, beginningHTML));
   document.write(com.terminalfour.publish.utils.BrokerUtils.processT4Tags(dbStatement, publishCache, section, content, language, isPreview, titleLink));
-  document.write('<figure class="programImageWrapper"><img src="' + programImageMedia + '" alt="' + altImage + '" class="programImage" /></figure>');
+
+  document.write('<div class="summaryWrapper">');
+  document.write('<figure class="programImageWrapper"><img src="' + programImageMedia + '" alt="' + altImage + '" class="programImage" /><figcaption class="programImageCaption">' + altImage + '</figcaption></figure>');
   document.write('<div class="summary">' + articleSummary + '</div>')
   document.write(listOfTags);
+  document.write('</div>'); // close summaryWrapper
+
+
   // document.write(listOfTypes);
 
   /* -- Write Program Level 1 Details --*/
