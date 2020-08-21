@@ -1,5 +1,5 @@
   /***
-*     @author Victor Chimenti, MSCS-SE 2020
+*     @author Victor Chimenti, MSCS-SE '20
 *     @file article-content-type.js
 *
 *     This new content type is being adapted from the knowledge base
