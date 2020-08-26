@@ -80,6 +80,7 @@ try {
   document.write('<div class="summaryWrapper">');
   document.write('<figure class="programImageWrapper"><img src="' + programImageMedia + '" alt="' + altImage + '" class="programImage" /><figcaption class="programImageCaption">' + altImage + '</figcaption></figure>');
   document.write('<div class="summary">' + articleSummary + '</div>')
+
   if (author != "") {
     document.write('<div class="author">');
     document.write('<div class="articleDetails articleAuthor"><h5>By: </h5><div class="articleAuthor"><h5>' + author + '</h5></div></div>');
@@ -87,6 +88,7 @@ try {
   } else {
     document.write('<div class="author articleDetails articleAuthor" style="display: none";><h5>No Author Provided</h5></div>');
   }
+  
   if (publishDate != "") {
     document.write('<div class="publishDate">');
     document.write('<div class="articleDetails articleDate"><h5>Published: </h5><div class="articleDate"><h5>' + publishDate + '</h5></div></div>');
@@ -94,6 +96,7 @@ try {
   } else {
     document.write('<div class="publishDate articleDetails articleDate" style="display: none";><h5>No Date Provided</h5></div>');
   }
+
   document.write(listOfTags);
 
 
