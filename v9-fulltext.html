@@ -1,8 +1,5 @@
 <script type="text/javascript">
-    /*
-  Copied from:
-   https://stackoverflow.com/questions/3915634/checking-if-a-url-is-broken-in-javascript
-  */
+
     function UrlExists(url, cb) {
         jQuery.ajax({
             url: url,
@@ -16,6 +13,8 @@
     }
     /*
     function checkLink(link, dom)
+
+
     
     Dom must be modified within checkLink due to the way $.ajax runs.
     */
@@ -46,34 +45,77 @@
             $("article").prepend("<div class='clearfix'></div><div class='outdatedArticle'style='background-color:#f7f7f7;z-index:9999;text-align:center;'><p style='font-size:1.4rem;color:#aa0000;line-height:1.8rem;margin:15px 0;padding:15px;'>This article is archived. Content may be missing or display incorrectly on the page.</p></div>");
         }
     });
+
 </script>
-<div class="newsArticleWrapper contentItem" id="id<t4 type='meta' meta='content_id' />" data-position-default="ZoneA"
-    data-position-selected="ZoneA">
+
+
+
+
+<div class="newsArticleWrapper contentItem" id="id<t4 type='meta' meta='content_id' />" data-position-default="ZoneA" data-position-selected="ZoneA">
+    
     <t4 type="meta" meta="html_anchor" />
     <div class="newsArticleHeader">
+
         <h1 id="pageTitle">
             <t4 type="content" name="Article Title" output="normal" modifiers="striptags,htmlentities" />
         </h1>
+
     </div>
+
+
     <article class="newsArticle standardContent">
-        <t4 type="content" name="Feature Image" output="selective-output" process-format="true"
+
+        <t4 type="content" 
+            name="Feature Image" 
+            output="selective-output" 
+            process-format="true" 
             format="<div class=&quot;newsArticleFeatureImage&quot;>$value</div>" formatter="image/*" />
-        <t4 type="content" name="Tagline" output="selective-output" modifiers="" process-format="true"
+
+        <t4 type="content" 
+            name="Tagline"
+            output="selective-output"
+            modifiers=""
+            process-format="true"
             format="<h2 class='tagline'>$value</h2>" />
-        <t4 type="content" name="Author" output="selective-output" modifiers="" process-format="true"
+
+        <t4 type="content"
+            name="Author"
+            output="selective-output"
+            modifiers=""
+            process-format="true"
             format="<div class=&quot;newsAuthor&quot;>Written by $value</div>" />
-        <t4 type="content" name="Photography By" output="selective-output" modifiers="" process-format="true"
+
+        <t4 type="content"
+            name="Photography By"
+            output="selective-output"
+            modifiers=""
+            process-format="true"
             format="<div class=&quot;newsPhotography&quot;>Photography by $value</div>" />
-        <t4 type="content" name="Publish Date" output="selective-output" process-format="true"
+
+        <t4 type="content"
+            name="Publish Date"
+            output="selective-output"
+            process-format="true"
             format="<div class=&quot;newsPublished&quot;>$value</div>" date_format="MMMM d, yyyy" />
+
+
         <div class="articleText">
-            <t4 type="content" name="News Article" output="normal" modifiers="medialibrary,nav_sections" />
+
+            <t4 type="content"
+                name="News Article"
+                output="normal"
+                modifiers="medialibrary,nav_sections" />
+
         </div>
 
     </article>
+
+
     <div class="prev-next">
+
         <!--    <t4 type="navigation" id="171" />-->
         <hr />
         <t4 type="navigation" name="Return to previous page" id="690" />
+
     </div>
 </div>
