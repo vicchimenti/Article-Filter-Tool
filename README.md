@@ -6,8 +6,8 @@ University Career Engagement Article Filter Tool
 
 - [] Verify that client wants checkboxes in B-Col
 - [] Convert Dropdown to Checkboxes in View and Content Item if verified
-- [] Implement Full Text Layout
-- [] Add Author Field
-- [] Add Publication Date Field
-- [] Move Image to the Left aka News Story
+- [x] Implement Full Text Layout
+- [x] Add Author Field
+- [x] Add Publication Date Field
+- [x] Move Image to the Left aka News Story
 - [o] Add Layout and Select Option for a Pinned Article
