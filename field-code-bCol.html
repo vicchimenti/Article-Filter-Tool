@@ -9,23 +9,29 @@
 *   User may filter by keyword input, course type, term, module, common course name, and faculty
 -->
 
-<form action="#" id="courseFilter">
+<form action="#" id="articleFilter">
     <!-- Search Field -->
-    <fieldset for="courseFilter">
+    <fieldset for="articleFilter">
 
 
         <!-- Keyword Search Input -->
-        <div class="col-xs-12 input input-wrap text-input">
-            <legend for="id_search">Filter Search</legend>
+        <!-- <div class="col-xs-12 form-group">
+            <legend for="id_search">Filter Articles</legend>
             <input type="text" class="form-control" name="searchthispage" value="" id="id_search"
                 placeholder="Search Instantly" autofocus aria-label="Search Keyword" />
+        </div> -->
+
+        <div class="col-xs-12 form-group">
+            <label for="keystroke_filter">Filter Articles</label>
+            <input type="text" class="form-control" name="articleScan" value="" id="keystroke_filter" placeholder="Search"
+                autofocus aria-label="Filter Articles" />
         </div>
 
 
 
 
         <!-- Search By Type -->
-        <div class="col-xs-12 input input-wrap">
+        <!-- <div class="col-xs-12 input input-wrap">
             <legend for="SelectBox-ByType">UCOR Courses</legend>
             <div class="select-input">
                 <select name="SelectBox-ByType" id="SelectBox-ByType">
@@ -57,33 +63,33 @@
                         Global Challenges</option>
                 </select>
             </div>
-        </div>
+        </div> -->
 
 
 
 
-        <!-- Search By Term -->
-        <div class="col-xs-12 input input-wrap" id="SelectBox-ByTerm">
-            <legend for="SelectBox-ByTerm">Upcoming Terms</legend>
+        <!-- Search By Type -->
+        <div class="col-xs-12 form-group" id="SelectBox-ByType">
+            <legend for="SelectBox-ByType">Categories</legend>
 
-            <input type="checkbox" name="SelectBox-ByTerm" id="Summer" value="Summer" />
-            <label for="Summer">Summer Quarter</label><br />
+            <input type="checkbox" name="SelectBox-ByType" id="Resume Building" value="Resume Building" />
+            <label for="Resume Building">Resume Building</label><br />
 
-            <input type="checkbox" name="SelectBox-ByTerm" id="Fall" value="Fall" />
-            <label for="Fall">Fall Quarter</label><br />
+            <input type="checkbox" name="SelectBox-ByType" id="Cover Letter Writing" value="Cover Letter Writing" />
+            <label for="Cover Letter Writing">Cover Letter Writing</label><br />
 
-            <input type="checkbox" name="SelectBox-ByTerm" id="Winter" value="Winter" />
-            <label for="Winter">Winter Quarter</label><br />
+            <input type="checkbox" name="SelectBox-ByType" id="Career Exploration" value="Career Exploration" />
+            <label for="Career Exploration">Career Exploration</label><br />
 
-            <input type="checkbox" name="SelectBox-ByTerm" id="Spring" value="Spring" />
-            <label for="Spring">Spring Quarter</label>
+            <input type="checkbox" name="SelectBox-ByType" id="Job & Internship Search" value="Job & Internship Search" />
+            <label for="Job & Internship Search">Job & Internship Search</label>
         </div>
 
 
 
 
         <!-- Search By Module -->
-        <div class="col-xs-12 input input-wrap" id="SelectBox-ByModule">
+        <!-- <div class="col-xs-12 input input-wrap" id="SelectBox-ByModule">
             <legend for="SelectBox-ByModule">Module</legend>
 
             <input type="checkbox" name="SelectBox-ByModule" id="Module I" value="Module I" />
@@ -94,6 +100,6 @@
 
             <input type="checkbox" name="SelectBox-ByModule" id="Module III" value="Module III" />
             <label for="Module III">Module III/3000-Level</label>
-        </div>
+        </div> -->
     </fieldset>
 </form>
