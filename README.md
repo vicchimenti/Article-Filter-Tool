@@ -4,7 +4,7 @@ University Career Engagement Article Filter Tool
 
 ## TODO
 
-- [] Verify that client wants checkboxes in B-Col
+- [x] Verify that client wants checkboxes in B-Col
 - [x] Convert Dropdown to Checkboxes in View and Content Item if verified
 - [x] Implement Full Text Layout
 - [x] Add Author Field
