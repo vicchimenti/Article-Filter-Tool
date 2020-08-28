@@ -11,3 +11,6 @@ University Career Engagement Article Filter Tool
 - [x] Add Publication Date Field
 - [x] Move Image to the Left aka News Story
 - [o] Add Layout and Select Option for a Pinned Article
+- [] Fix Return to Previous Page Bug
+- [] Post Array of Tags
+
