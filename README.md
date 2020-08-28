@@ -15,4 +15,3 @@ University Career Engagement Article Filter Tool
 - [] Post Array of Tags
 - [] Fix No Results Message Bug
 - [] Adjust Media Query for text size in filter field
-
