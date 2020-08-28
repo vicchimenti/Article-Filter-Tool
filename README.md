@@ -5,7 +5,7 @@ University Career Engagement Article Filter Tool
 ## TODO
 
 - [] Verify that client wants checkboxes in B-Col
-- [] Convert Dropdown to Checkboxes in View and Content Item if verified
+- [x] Convert Dropdown to Checkboxes in View and Content Item if verified
 - [x] Implement Full Text Layout
 - [x] Add Author Field
 - [x] Add Publication Date Field
@@ -13,4 +13,5 @@ University Career Engagement Article Filter Tool
 - [o] Add Layout and Select Option for a Pinned Article
 - [] Fix Return to Previous Page Bug
 - [] Post Array of Tags
+- [] Fix No Results Message Bug
 
