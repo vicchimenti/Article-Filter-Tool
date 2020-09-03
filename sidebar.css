@@ -79,6 +79,7 @@ div#zoneB div#filterField legend {
     margin: 15px;
 }
 
-.hideResultsMessage {
+/**  filter hidden classes  **/
+.hideByText, .hideByType, .hideResultsMessage {
     display: none;
 }

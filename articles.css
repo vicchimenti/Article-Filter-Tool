@@ -60,7 +60,7 @@ figure figcaption.programImageCaption {
     }
 }
 
-/**  filter-search hidden classes  **/
+/**  filter hidden classes  **/
 .hideByText, .hideByType, .hideResultsMessage {
     display: none;
 }
