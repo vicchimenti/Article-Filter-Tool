@@ -53,13 +53,6 @@ div#zoneB div#filterField legend {
 
 
 
-
-.noResultsToShow {
-    background: #e3e3da;
-    padding: 30px;
-    margin: 15px;
-}
-
 @media (max-width:767.999px) {
     #filterFieldWrapper {
         padding-bottom: 2rem;
@@ -76,4 +69,16 @@ div#zoneB div#filterField legend {
     fieldset {
         padding-bottom: 20px;
     }
+}
+
+
+
+.noResultsToShow {
+    background: #e3e3da;
+    padding: 30px;
+    margin: 15px;
+}
+
+.hideResultsMessage {
+    display: none;
 }
