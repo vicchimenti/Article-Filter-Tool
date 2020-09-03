@@ -13,5 +13,5 @@ University Career Engagement Article Filter Tool
 - [o] Add Layout and Select Option for a Pinned Article
 - [] Fix Return to Previous Page Bug
 - [] Post Array of Tags
-- [] Fix No Results Message Bug
+- [x] Fix No Results Message Bug
 - [] Adjust Media Query for text size in filter field
