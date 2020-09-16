@@ -26,13 +26,14 @@
                     <t4 type="content" name="Publish Date" output="normal" date_format="MMM d, YYYY" />
                 </em>
             </p>
-            <script>
+            <!-- <script>
                 document.write(listOfTags);
-            </script>
+            </script> -->
             <!-- <ul class="invisibleTags">
-                <t4 type="content" name="Tags" output="selective-output" format="<ul class=&quot;invisibleTags&quot;></ul>"
-                    format-modifiers="<li>$value</li>" />
+                <t4 type="content" name="Tags" output="selective-output" display_field="value" modifiers="js-var" textual-name-separator="," format="<ul class=&quot;invisibleTags&quot;>$value</ul>" format-modifiers="" />
             </ul> -->
+            <t4 type="content" name="Tags" output="selective-output" display_field="value" modifiers="js-var" format="<ul class=&quot;invisibleTags&quot;>$value</ul>" textual-name-separator="," format-modifiers="" />
+
             <p class="readmore">
                 <a href="<t4 type='content' name='Name' output='fulltext' use-element='true' filename-element='Article Title' modifiers='striptags,htmlentities' />">Read More
                     <span class="sr-only sr-only-focusable"> about
