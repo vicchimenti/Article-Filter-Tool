@@ -32,7 +32,9 @@
             <!-- <ul class="invisibleTags">
                 <t4 type="content" name="Tags" output="selective-output" display_field="value" modifiers="js-var" textual-name-separator="," format="<ul class=&quot;invisibleTags&quot;>$value</ul>" format-modifiers="" />
             </ul> -->
-            <t4 type="content" name="Tags" output="selective-output" display_field="value" modifiers="js-var" format="<ul class=&quot;invisibleTags&quot;>$value</ul>" textual-name-separator="," format-modifiers="" />
+
+            
+            <t4 type="content" name="Tags" output="selective-output" display_field="value" process-format="true" modifiers="js-var" format="<ul class=&quot;invisibleTags&quot;>$value</ul>" textual-name-separator="," format-modifiers="" />
 
             <p class="readmore">
                 <a href="<t4 type='content' name='Name' output='fulltext' use-element='true' filename-element='Article Title' modifiers='striptags,htmlentities' />">Read More
