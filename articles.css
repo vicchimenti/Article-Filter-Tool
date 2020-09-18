@@ -20,7 +20,7 @@
     text-decoration: none;
 }
 
-.tagGroup .tagLabel .topics {
+span.tagGroup h5.tagLabel p.topics {
     display: inline-block;
 }
 
@@ -65,6 +65,6 @@ figure figcaption.programImageCaption {
 }
 
 /**  filter hidden classes  **/
-.hideByText, .hideByType, .hideResultsMessage .invisibleTags {
+.hideByText, .hideByType, .hideResultsMessage, div.invisibleTags {
     display: none;
 }
