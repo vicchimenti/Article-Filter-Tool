@@ -34,7 +34,7 @@
             </ul> -->
 
             
-            <t4 type="content" name="Tags" output="selective-output" display_field="value" process-format="true" modifiers="js-var" format="<ul class=&quot;invisibleTags&quot;>$value</ul>" textual-name-separator="," format-modifiers="" />
+            <t4 type="content" name="Tags" output="selective-output" display_field="value" process-format="true" modifiers="js-var" format="<ul class=&quot;invisibleTags&quot;>$value</ul>" textual-value-separator="," for-each="<li>$value</li>" />
 
             <p class="readmore">
                 <a href="<t4 type='content' name='Name' output='fulltext' use-element='true' filename-element='Article Title' modifiers='striptags,htmlentities' />">Read More
