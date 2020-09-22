@@ -59,23 +59,28 @@ div#zoneB div#SelectBox-ByType legend {
     font-size: 1.5rem;
 }
 
-div.form-group#keystroke_filter_field #keystrokeLabel #filterField label {
+div#zoneB div#filterField div#keystroke_filter_field label#keystrokeLabel {
     display: none;
 }
 
 
 
 @media (max-width:767.999px) {
+
     #filterFieldWrapper {
         padding-bottom: 2rem;
+    }
+
+    #filterFieldWrapper div#filterField div#keystroke_filter_field label#keystrokeLabel {
+    display: none;
     }
 }
 
-@media (max-width:767.999px) {
+/* @media (max-width:767.999px) {
     #filterFieldWrapper {
         padding-bottom: 2rem;
     }
-}
+} */
 
 @media (min-width:767.999px) and (max-width: 991.999px) {
     fieldset {
