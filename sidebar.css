@@ -28,7 +28,7 @@
     width: 100%;
 }
 
-#filterField select {
+#SelectBox-ByType select {
     color: #333333;
     font-weight: 400;
     font-size: 1.4rem;
@@ -41,19 +41,27 @@
     width: 100%;
 }
 
-div#zoneB div#filterField label {
-    /* display: inline;
-    font-size: 1rem; */
-    display: none;
+/* div#zoneB div#filterField label {
+    display: inline;
+    font-size: 1rem;
 }
 
 div#zoneB div#filterField legend {
     font-size: 1.5rem;
+} */
+
+div#zoneB div#SelectBox-ByType label {
+    display: inline;
+    font-size: 1rem;
 }
 
-/* .keystrokeLabel label {
+div#zoneB div#SelectBox-ByType legend {
+    font-size: 1.5rem;
+}
+
+div.form-group#keystroke_filter_field #keystrokeLabel #filterField label {
     display: none;
-} */
+}
 
 
 
