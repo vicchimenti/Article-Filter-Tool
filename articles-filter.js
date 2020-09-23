@@ -59,7 +59,7 @@ $(function () {
                     let keyword = $(this).val().toLowerCase();
                     // filter the education abroad items for the input key
                     $(function () {
-                        $('.knowledgeBaseItemWrapper').filter(function () {
+                        $('.newsItemWrapper').filter(function () {
                             // when the search key is not present in the item then hide the item
                             $(this).toggleClass('hideByText', !($(this).text().toLowerCase().indexOf(keyword) > -1));
                         });
