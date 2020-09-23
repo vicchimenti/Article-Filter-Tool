@@ -82,16 +82,14 @@ $(function () {
                     typeKeys[0] = -1;
                     $('input[name=SelectBox-ByType]:checked').each(function (item) {
                         typeKeys[item] = $(this).val();
-                        console.log("this typekey: " + typeKeys[item]);
                     });
                     // If Search Key array has at least one valid value then Compare to the Each Content Item in term
                     if (typeKeys[0] != -1) {
                         $('.topics').filter(function (i, e) {
                             let typeValue = $(this).text();
-                            console.log("typeValue: " + typeValue)
                             // set state to hidden for all items
                             $(this).parents('.newsItemWrapper').addClass('hideByType');
-                            // Check to see if any Key is a match with the current Value
+                            // Check to see if any Key is included in the current Value
                             for (let index = 0; index < typeKeys.length; index++) {
                                 if (typeValue.includes(typeKeys[index])) {
                                     // make current item visible when we validate a match
