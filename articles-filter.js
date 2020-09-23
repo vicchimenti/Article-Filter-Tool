@@ -81,18 +81,18 @@ $(function () {
                     let typeKey = $(this).val();
                     // If Search Key is Not Null then Compare to the Type List Items in Each Content Item
                     if (typeKey) {
-                        $('.articleType').filter(function (i, e) {
+                        $('.topics').filter(function (i, e) {
                             var typeValue = $(this).text();
                             // Check to see if the Key and Value are a Match
                             if (typeValue.match(typeKey)) {
-                                $(this).parents('.knowledgeBaseItemWrapper').removeClass('hideByType');
+                                $(this).parents('.newsItemWrapper').removeClass('hideByType');
                             } else {
-                                $(this).parents('.knowledgeBaseItemWrapper').addClass('hideByType');
+                                $(this).parents('.newsItemWrapper').addClass('hideByType');
                             }
                         });
                         // Else the Search Key is Null so Reset all Content Items to Visible
                     } else {
-                        $('.knowledgeBaseItemWrapper').removeClass('hideByType');
+                        $('.newsItemWrapper').removeClass('hideByType');
                     }
                     // parse out unselected content items and limit display to user selected items
                     parseItems.process();
