@@ -93,7 +93,7 @@ $(function () {
                             $(this).parents('.newsItemWrapper').addClass('hideByType');
                             // Check to see if any Key is a match with the current Value
                             for (let index = 0; index < typeKeys.length; index++) {
-                                if (typeValue.contains(typeKeys[index])) {
+                                if (typeValue.includes(typeKeys[index])) {
                                     // make current item visible when we validate a match
                                     $(this).parents('.newsItemWrapper').removeClass('hideByType');
                                 }
